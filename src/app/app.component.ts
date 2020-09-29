@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { from } from 'rxjs';
-import { IToDo } from './models/todo.model';
-import { TodoService } from "./services/todo.service";
+// import { from } from 'rxjs';
+// import { IToDo } from './models/todo.model';
+// import { TodoService } from "./services/todo.service";
 
 
 @Component({
@@ -10,17 +10,17 @@ import { TodoService } from "./services/todo.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  toDo: IToDo[] = [];
+  // toDo: IToDo[] = [];
 
-  constructor(private TodoService: TodoService) {
-    this.TodoService.getToDo().subscribe(firebaseToDo => {
-      console.log(firebaseToDo);
-      for (const key in firebaseToDo) {
-        this.toDo.push(firebaseToDo[key])
-      }
-      // this.toDo = firebaseToDo
-      console.log(this.toDo)
-    })
+  // constructor(private TodoService: TodoService) {
+  //   this.TodoService.getToDo().subscribe(firebaseToDo => {
+  //     console.log(firebaseToDo);
+  //     for (const key in firebaseToDo) {
+  //       this.toDo.push(firebaseToDo[key])
+  //     }
+  //     // this.toDo = firebaseToDo
+  //     console.log(this.toDo)
+  //   })
 
-  }
+  // }
 }
