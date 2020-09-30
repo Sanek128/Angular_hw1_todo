@@ -11,11 +11,11 @@ export class TodoService {
   constructor(private http: HttpClient) { }
 
   getToDo(): Observable <IToDo[]> {
-    return this.http.get <IToDo[]> ('https://hw-3-vue-firebase.firebaseio.com/myToDoList.json')
+    return this.http.get <IToDo[]> ('https://hw-3-vue-firebase-1.firebaseio.com/myToDoList/.json')
   }
 
   delToDo(id: number): Observable <IToDo[]> {
-    return this.http.delete <IToDo[]> (`https://hw-3-vue-firebase.firebaseio.com/myToDoList/${id}.json`);
+    return this.http.delete <IToDo[]> (`https://hw-3-vue-firebase-1.firebaseio.com/myToDoList/${id}.json`);
   }
 }
 
