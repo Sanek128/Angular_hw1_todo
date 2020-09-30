@@ -20,8 +20,11 @@ export class OneTodoComponent implements OnInit {
     this.TodoService.delToDo(id).subscribe();
     console.log(id);
     this.toDo = [];
-  }
 
+    
+    this.TodoService.getToDo();
+  }
+  
   ngOnInit(): void {
   }
 
