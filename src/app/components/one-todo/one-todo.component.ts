@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { from } from 'rxjs';
-import { ActivatedRoute } from "@angular/router";
 import { IToDo } from "../../models/todo.model";
 import { TodoService } from "../../services/todo.service";
 
@@ -11,19 +10,20 @@ import { TodoService } from "../../services/todo.service";
   styleUrls: ['./one-todo.component.css']
 })
 export class OneTodoComponent implements OnInit {
-  @Input() toDo: IToDo
+  @Input() toDo: IToDo;
   
   constructor(private TodoService: TodoService) { }
 
-  // delToDo (id: string, task: string): void {
-  delToDo (id: number): void {
-    this.TodoService.delToDo(id).subscribe();
-    console.log(id);
-    this.toDo = [];
-
-    
-    this.TodoService.getToDo();
-  }
+  // delToDo (id: number): void {
+  //   this.TodoService.delToDo(id).subscribe();
+  //   console.log(id);
+  //   this.toDo = [];
+  // }
+  
+  // delToDo(id: number) {
+  // this.TodoService.delToDo(id).subscribe(value => value, error => console.log(error));
+  // this.toDo.splice(this.toDo.findIndex(value => value.id === id),1);
+  // }
   
   ngOnInit(): void {
   }

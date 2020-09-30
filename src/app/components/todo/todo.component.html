@@ -1,6 +1,15 @@
 <h3 id = "toDo" style="text-align: center"> TO DO TASKS </h3>
-<app-one-todo *ngFor="let td of toDo" [toDo]="td"></app-one-todo>
+<!-- <app-one-todo *ngFor="let td of toDo" [toDo]="td"></app-one-todo> -->
 
+<div id = "toDo" *ngFor="let td of toDo">
+    <div>
+        {{td.id}}
+        <button (click)="delToDo(toDo.id)" style="margin-left: 5px">Выполено</button>
+        {{td.task}}
+    </div>
+
+
+</div>
 
 <!-- <div>
 <ol>

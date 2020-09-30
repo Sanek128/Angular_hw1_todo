@@ -23,6 +23,10 @@ export class TodoComponent implements OnInit {
       console.log(this.toDo)
     })
   }
+  delToDo(id: number){
+    this.TodoService.delToDo(id).subscribe(value => value, err => console.log(err));
+    this.toDo.splice(this.toDo.findIndex(value => value.id === id),1);
+    }
 
   ngOnInit(): void {
   }
