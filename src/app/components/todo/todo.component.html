@@ -4,7 +4,7 @@
 <div id = "toDo" *ngFor="let td of toDo">
     <div>
         {{td.id}}
-        <button (click)="delTodo(td.id, td.task)" style="margin-left: 5px">Выполено</button>
+        <button (click)="delTodo(td.id, td.task, td.idForDel)" style="margin-left: 5px">Выполено</button>
         {{td.task}}
     </div>
 </div>
