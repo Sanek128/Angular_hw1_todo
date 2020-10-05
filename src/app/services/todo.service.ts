@@ -18,8 +18,8 @@ export class TodoService {
   //   return this.http.delete <IToDo[]> (`https://hw-3-vue-firebase-1.firebaseio.com/myToDoList/${id}.json`);
   // }
   
-  delToDo(task: string): Observable <IToDo[]> {
-    return this.http.delete <IToDo[]> (`https://hw-3-vue-firebase-1.firebaseio.com/myToDoList/${task}.json`);
+  delToDo(idForDel: string): Observable <IToDo[]> {
+    return this.http.delete <IToDo[]> (`https://hw-3-vue-firebase-1.firebaseio.com/myToDoList/${idForDel}.json`);
   }
 
   
